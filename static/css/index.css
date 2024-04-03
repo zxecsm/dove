@@ -1,0 +1,130 @@
+:root {
+  --text-hover-color: #71a2d3;
+  --border-color: #888;
+}
+@font-face {
+  font-family: 'myfont';
+  src: url(/css/consolas.ttf);
+}
+html {
+  --text-color: #000;
+  --text-color1: #333333;
+  --bg-color: #fff;
+}
+html.dark {
+  --text-color: #ffffff;
+  --text-color1: #dddcdc;
+  --bg-color: #000;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Consolas, myfont;
+}
+
+.loading_mask {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.head {
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  font-size: 20px;
+  font-weight: normal;
+  user-select: none;
+}
+.head .logo {
+  font-size: 70px;
+  cursor: pointer;
+}
+.head .logo:hover {
+  color: var(--text-hover-color);
+}
+.head .title.success {
+  color: green;
+}
+.head .title.error {
+  color: red;
+}
+.btn {
+  flex: none;
+  padding: 20px 0;
+  user-select: none;
+}
+button {
+  color: var(--text-color);
+  padding: 6px 20px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid var(--border-color);
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 18px;
+}
+button:hover {
+  border-color: var(--text-hover-color);
+}
+.text_box,
+.qr_box,
+.read_box {
+  width: 100%;
+  max-width: 800px;
+  display: none;
+  flex-flow: column;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+.text_box textarea {
+  flex: auto;
+  min-height: 400px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Consolas, myfont;
+  resize: vertical;
+  background-color: transparent;
+  color: var(--text-color);
+  outline: none;
+  border: 2px solid var(--border-color);
+}
+.text_box textarea:focus {
+  border-color: var(--text-hover-color);
+}
+.qr_box img {
+  width: 90%;
+  max-width: 400px;
+  user-select: none;
+}
+.read_box p {
+  display: none;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size: 18px;
+  border: 2px solid var(--border-color);
+}
+.github {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.github:hover {
+  color: var(--text-hover-color);
+}
